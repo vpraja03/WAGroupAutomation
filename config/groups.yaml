@@ -1,0 +1,51 @@
+# How numbers are assigned to WhatsApp groups.
+# First matching rule wins. If none match, the contact's `group` column is used.
+#
+# Each rule:
+#   group: WhatsApp group subject (max 128 chars)
+#   description: optional group description
+#   join_approval_mode: auto_approve | approval_required
+#   when:
+#     column: CSV/Excel column name
+#     equals: exact value (string)
+#     in: list of values
+#     regex: Python regex against the column
+
+default_join_approval_mode: auto_approve
+
+rules:
+  - group: "IT Team"
+    description: "Internal IT coordination"
+    when:
+      column: department
+      equals: IT
+
+  - group: "Sales Team"
+    description: "Sales and field updates"
+    when:
+      column: department
+      in: [Sales, Field]
+
+  - group: "Chennai Zone"
+    description: "Chennai operations"
+    when:
+      column: city
+      equals: Chennai
+
+  - group: "Madurai Zone"
+    description: "Madurai operations"
+    when:
+      column: city
+      equals: Madurai
+
+  - group: "Batch A"
+    description: "Training batch A"
+    when:
+      column: batch
+      regex: "^A"
+
+  - group: "Batch B"
+    description: "Training batch B"
+    when:
+      column: batch
+      regex: "^B"

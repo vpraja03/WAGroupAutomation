@@ -1,0 +1,9 @@
+name,phone,department,city,batch,group
+Asha,+919000000001,IT,Chennai,A1,
+Bala,9000000002,IT,Madurai,A2,
+Chitra,9000000003,Sales,Chennai,B1,
+Deepak,+919000000004,Sales,Madurai,B2,
+Esha,9000000005,HR,Coimbatore,C1,HR Team
+Farhan,9000000006,Field,Chennai,B3,
+Gita,not-a-number,IT,Chennai,A3,
+Hari,9000000008,Support,Salem,D1,

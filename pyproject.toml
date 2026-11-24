@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wa-groups"
+version = "0.1.0"
+description = "Classify mobile numbers and create WhatsApp Cloud API groups"
+requires-python = ">=3.10"
+dependencies = [
+  "httpx>=0.27.0",
+  "pydantic>=2.7.0",
+  "pydantic-settings>=2.3.0",
+  "python-dotenv>=1.0.1",
+  "PyYAML>=6.0.1",
+  "phonenumbers>=8.13.0",
+  "openpyxl>=3.1.5",
+  "pandas>=2.2.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["wa_groups*"]
